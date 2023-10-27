@@ -1,0 +1,11 @@
+/* Table class copied from https://github.com/muratkemaldar/periodic-table-css */
+.Table {
+  display: grid;
+  grid-template-columns: repeat(18, 64px);
+  grid-template-rows: repeat(10, 64px);
+  grid-gap: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

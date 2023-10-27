@@ -3,6 +3,7 @@ import "./Element.css";
 import { useDisplayedElement, useDisplayedElementUpdate } from "../../contexts/DisplayedElement";
 
 export default function Element(props) {
+    console.log(props.element);
     const element = useDisplayedElement();
     const setElement = useDisplayedElementUpdate();
 
@@ -10,6 +11,6 @@ export default function Element(props) {
         setElement(evt.target.value);
     }
     return (
-        <div></div>
+        <div className="Element" style={{gridRow: props.element.ypos, gridColumn: props.element.xpos}}>{props.element.symbol}</div>
     );
 }

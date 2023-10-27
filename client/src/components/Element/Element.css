@@ -1,0 +1,15 @@
+/* Element class copied form https://github.com/muratkemaldar/periodic-table-css */
+.Element {
+  background: white;
+  border: 1px solid black;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Element:hover {
+  transform: scale(1.25, 1.25);
+  z-index: 1;
+}
