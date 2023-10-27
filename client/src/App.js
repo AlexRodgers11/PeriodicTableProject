@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Controls from "./components/Controls/Controls";
 import Table from "./components/Table/Table";
 import DataDisplay from "./components/DataDisplay/DataDisplay";
-import { ElementProvider } from "./contexts/ElementContext";
+import { DisplayedElementProvider } from "./contexts/DisplayedElement";
 import { FilterProvider } from "./contexts/Filter";
 import { SortProvider } from "./contexts/Sort";
 
@@ -10,7 +10,7 @@ class App extends Component {
 
     render() {
         return (
-            <ElementProvider>
+            <DisplayedElementProvider>
             <SortProvider>
             <FilterProvider>
                 <Controls />
@@ -18,7 +18,7 @@ class App extends Component {
                 <DataDisplay />
             </FilterProvider>
             </SortProvider>
-            </ElementProvider>
+            </DisplayedElementProvider>
         )
     }
 

@@ -1,14 +1,14 @@
 import React, { useContext} from "react";
 import "./DataDisplay.css";
-import { useElement, useElementUpdate } from "../../contexts/ElementContext";
+import { useDisplayedElement, useDisplayedElementUpdate } from "../../contexts/DisplayedElement";
 
 export default function DataDisplay() {
-    const element = useElement();
-    const setElement = useElementUpdate();
+    const displayedElement = useDisplayedElement();
+    const setDisplayedElement = useDisplayedElementUpdate();
     
     return (
         <div>
-            <p>The selected element is: {element}</p>
+            <p>The displayed element is: {displayedElement}</p>
         </div>
     );
 }

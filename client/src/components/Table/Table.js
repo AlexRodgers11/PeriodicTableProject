@@ -1,13 +1,13 @@
 import React from "react";
 import "./Table.css";
 import Element from "../Element/Element";
-import { useElement, useElementUpdate } from "../../contexts/ElementContext";
+import { useDisplayedElement, useDisplayedElementUpdate } from "../../contexts/DisplayedElement";
 import { useSort } from "../../contexts/Sort";
 import { useFilter } from "../../contexts/Filter";
 
 export default function Table(props) {
-    const element = useElement();
-    const setElement = useElementUpdate();
+    const element = useDisplayedElement();
+    const setElement = useDisplayedElementUpdate();
     const filter = useFilter();
     const sort = useSort();
 
