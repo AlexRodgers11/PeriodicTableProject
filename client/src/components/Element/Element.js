@@ -3,14 +3,13 @@ import "./Element.css";
 import { useDisplayedElement, useDisplayedElementUpdate } from "../../contexts/DisplayedElement";
 
 export default function Element(props) {
-    console.log(props.element);
-    const element = useDisplayedElement();
-    const setElement = useDisplayedElementUpdate();
+    const setDisplayedElement = useDisplayedElementUpdate();
 
-    const handleElementChange = evt => {
-        setElement(evt.target.value);
+    const handleElementChange = () => {
+        console.log(props.element.name);
+        setDisplayedElement(props.element.name);
     }
     return (
-        <div className="Element" style={{gridRow: props.element.ypos, gridColumn: props.element.xpos}}>{props.element.symbol}</div>
+        <div className="Element" style={{gridRow: props.element.ypos, gridColumn: props.element.xpos}} onClick={handleElementChange}>{props.element.symbol}</div>
     );
 }
