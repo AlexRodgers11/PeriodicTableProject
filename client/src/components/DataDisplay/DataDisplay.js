@@ -5,9 +5,14 @@ import { useDisplayedElement, useDisplayedElementUpdate } from "../../contexts/D
 export default function DataDisplay() {
     const displayedElement = useDisplayedElement();
     const setDisplayedElement = useDisplayedElementUpdate();
+
+    const close = () => {
+        setDisplayedElement("");
+    }
     
     return (
-        <div>
+        <div className="DataDisplay">
+            <p onClick={close}>Close</p>
             <p>The displayed element is: {displayedElement}</p>
         </div>
     );

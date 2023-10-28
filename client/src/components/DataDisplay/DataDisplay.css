@@ -1,0 +1,7 @@
+.DataDisplay {
+  height: 60vh;
+  width: 60vw;
+  min-height: 500px;
+  min-width: 500px;
+  border: 1px solid black;
+}

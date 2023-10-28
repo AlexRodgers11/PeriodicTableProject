@@ -16,12 +16,8 @@ export default function Table(props) {
     const weightedView = useWeightedView();
 
     return (
-        <div>
-            <p>Selected filter is {filter}</p>
-            <p>Selected weightedView is {weightedView}</p>
-            <div className="Table">
-                {elements.map(element => <Element className="Element" element={element} />)}
-            </div>
+        <div className="Table">
+            {elements.map(element => <Element className="Element" element={element} />)}
         </div>
     );
 }

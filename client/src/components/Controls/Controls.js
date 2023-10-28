@@ -19,14 +19,14 @@ export default function Controls() {
     }
 
     return (
-        <div>
+        <div className="Controls">
             <select value={filter} onChange={handleFilterChange}>
-                <option value=""></option>
+                <option value="">Filter</option>
                 <option value="discovered-by">Discovered By</option>
                 <option value="discovery-decade">Discovery Decade</option>
             </select>
             <select value={weightedView} onChange={handleWeightedViewChange}>
-                <option value=""></option>
+                <option value="">Weighted View</option>
                 <option value="date-discovered">Date Discovered</option>
                 <option value="universal-percentage">Universal Percentage</option>
             </select>
