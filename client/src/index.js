@@ -4,12 +4,15 @@ import App from "./App";
 import { DisplayedElementProvider } from "./contexts/DisplayedElement";
 import { FilterProvider } from "./contexts/Filter";
 import { WeightedViewProvider } from "./contexts/WeightedView";
+import { ElementDataProvider } from "./contexts/ElementData";
 
 ReactDOM.render(
     <DisplayedElementProvider>
         <WeightedViewProvider>
             <FilterProvider>
-                <App />
+                <ElementDataProvider>
+                    <App />
+                </ElementDataProvider>
             </FilterProvider>
         </WeightedViewProvider>
     </DisplayedElementProvider>
