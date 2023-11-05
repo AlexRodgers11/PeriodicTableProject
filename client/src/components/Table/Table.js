@@ -1,23 +1,18 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 import "./Table.css";
 import Element from "../Element/Element";
-import { useDisplayedElement, useDisplayedElementUpdate } from "../../contexts/DisplayedElement";
-import { useWeightedView } from "../../contexts/WeightedView";
-import { useFilter } from "../../contexts/Filter";
+
 //note, periodicTableData.json copied from https://github.com/muratkemaldar/periodic-table-css/blob/master/src/PeriodicTableJSON.json
 import periodicTableData from "../../periodic-table.json";
 
 
-export default function Table(props) {
+export default function Table() {
     const elements = periodicTableData.elements;
-    const element = useDisplayedElement();
-    const setElement = useDisplayedElementUpdate();
-    const filter = useFilter();
-    const weightedView = useWeightedView();
 
     return (
         <div className="Table">
-            {elements.map(element => <Element className="Element" element={element} />)}
+            {elements.map(element => <Element className="Element" element={element} key={uuidv4()}/>)}
         </div>
     );
 }
