@@ -2,14 +2,14 @@ import React from "react";
 import "./Element.css";
 import { useDisplayedElement, useDisplayedElementUpdate } from "../../contexts/DisplayedElement";
 import { useElementData } from "../../contexts/ElementData";
+import periodicTableData from "../../periodic-table.json";
 
 export default function Element(props) {
     const elementData = useElementData();
     const setDisplayedElement = useDisplayedElementUpdate();
 
     const handleElementChange = () => {
-        console.log(props.element.name);
-        setDisplayedElement(props.element.name);
+        setDisplayedElement(props.element.number);
     }
     return (
         <div className="Element" style={{gridRow: props.element.ypos, gridColumn: props.element.xpos}} onClick={handleElementChange}>
