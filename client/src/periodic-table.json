@@ -3310,5 +3310,49 @@
       "electronegativity_pauling": null,
       "ionization_energies": []
     }
-  ]
+  ],
+  "categories": {
+    "atomic_mass": {
+      "non_null_count": 119,
+      "low": 1.008,
+      "high": 315,
+      "range": 313.992
+    },
+    "boil": {
+      "non_null_count": 105,
+      "low": 0,
+      "high": 6203,
+      "range": 6203
+    },
+    "melt": {
+      "non_null_count": 107,
+      "low": 0.95,
+      "high": 3695,
+      "range": 3694.05
+    },
+    "density": {
+      "non_null_count": 115,
+      "low": 0.08988,
+      "high": 40.7,
+      "range": 40.61012
+    },
+    "electron_affinity": {
+      "non_null_count": 110,
+      "low": -223.22,
+      "high": 348.575,
+      "range": 571.795
+    },
+    "molar_heat": {
+      "non_null_count": 79,
+      "low": 8.517,
+      "high": 62.7,
+      "range": 54.183
+    },
+    "electronegativity_pauling": {
+      "non_null_count": 100,
+      "low": 0.79,
+      "high": 3.98,
+      "range": 3.19
+    }
+  }
 }
