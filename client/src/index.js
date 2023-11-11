@@ -5,14 +5,17 @@ import { DisplayedElementProvider } from "./contexts/DisplayedElement";
 import { FilterProvider } from "./contexts/Filter";
 import { WeightedViewProvider } from "./contexts/WeightedView";
 import { ElementDataProvider } from "./contexts/ElementData";
+import { DisplayAtomicNumberProvider } from "./contexts/DisplayAtomicNumber";
 
 ReactDOM.render(
     <DisplayedElementProvider>
         <WeightedViewProvider>
             <FilterProvider>
-                <ElementDataProvider>
-                    <App />
-                </ElementDataProvider>
+                <DisplayAtomicNumberProvider>
+                    <ElementDataProvider>
+                        <App />
+                    </ElementDataProvider>
+                </DisplayAtomicNumberProvider>
             </FilterProvider>
         </WeightedViewProvider>
     </DisplayedElementProvider>

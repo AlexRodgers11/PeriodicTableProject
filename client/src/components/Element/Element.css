@@ -19,6 +19,14 @@
   font-size: 0.625rem;
 }
 
+.Element_atomic_number {
+  position: absolute;
+  top: 7%;
+  left: 7%;
+  margin: 0;
+  font-size: 0.75rem;
+}
+
 .Element:hover {
   transform: scale(1.25, 1.25);
   z-index: 1;

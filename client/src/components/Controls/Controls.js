@@ -4,6 +4,7 @@ import { useWeightedView, useWeightedViewUpdate } from "../../contexts/WeightedV
 import { useFilter, useFilterUpdate } from "../../contexts/Filter";
 import { sortTable } from "../../utils";
 import { useElementData, useElementDataUpdate } from "../../contexts/ElementData";
+import { useDisplayAtomicNumber, useDisplayAtomicNumberToggle } from "../../contexts/DisplayAtomicNumber";
 
 
 export default function Controls() {
@@ -13,6 +14,8 @@ export default function Controls() {
     const setWeightedView = useWeightedViewUpdate();
     const elementData = useElementData();
     const setElementData = useElementDataUpdate();
+    const displayAtomicNumber = useDisplayAtomicNumber();
+    const toggleDisplayAtomicNumber = useDisplayAtomicNumberToggle();
 
     const handleElementDataChange = evt => {
         setElementData(evt.target.value);
@@ -55,6 +58,8 @@ export default function Controls() {
                 <option value="electronegativity_pauling">Electronegativity Pauling</option>
                 <option value="atomic_mass">Atomic Mass</option>
             </select>
+            <label htmlFor="show-atomic-number">Show Atomic Number</label>
+            <input type="checkbox" name="show-atomic-number" id="show-atomic-number" checked={displayAtomicNumber} onChange={toggleDisplayAtomicNumber}></input>
         </div>
     );
 }
