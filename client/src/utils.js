@@ -24,9 +24,9 @@ const sortTable = (criterion) => {
 }
 
 const generateLightness = (value, low, range) => {
+    if(!value) return 100;
 
     let lightness = 100 - (Math.abs(value - low) * (100 / range));
-
     return lightness;
 }
 
