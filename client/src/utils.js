@@ -29,6 +29,26 @@ const generateLightness = (value, low, range) => {
     let lightness = 100 - (Math.abs(value - low) * (100 / range));
     return lightness;
 }
+const displayUnits = (category) => {
+    switch(category) {
+        case "atomic_mass":
+            return "u";
+        case "boil":
+            return "K";
+        case "melt":
+            return "K";
+        case "density":
+            return "g/cc";
+        case "electron_affinity":
+            return "KJ/mole";
+        case "molar_heat":
+            return "J/(K⋅mol)";
+        case "electronegativity_pauling":
+            return "";
+        default:
+            return "";
+    }
+}
 
-export { generateLightness, sortTable };
+export { displayUnits, generateLightness, sortTable };
 

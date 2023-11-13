@@ -2,7 +2,7 @@ import React, {useEffect, useState } from "react";
 import "./Element.css";
 import { useDisplayedElement, useDisplayedElementUpdate } from "../../contexts/DisplayedElement";
 import { useElementData } from "../../contexts/ElementData";
-import { generateLightness } from "../../utils";
+import { displayUnits, generateLightness } from "../../utils";
 import periodicTableData from "../../periodic-table.json";
 import { useWeightedView } from "../../contexts/WeightedView";
 import { useDisplayAtomicNumber } from "../../contexts/DisplayAtomicNumber";
@@ -28,8 +28,8 @@ export default function Element(props) {
             {displayAtomicNumber &&
                 <p className="Element_atomic_number">{props.element.number}</p>
             }
-            {elementData &&
-                <p className="Element_detail">{props.element[elementData]}</p>
+            {(elementData && props.element[elementData] !== null) &&
+                <p className="Element_detail">{parseFloat(props.element[elementData]?.toFixed(1))}{displayUnits(weightedView)}</p>
             }
             <p>
                 {props.element.symbol}
