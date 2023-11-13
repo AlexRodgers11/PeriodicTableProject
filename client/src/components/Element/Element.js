@@ -24,7 +24,7 @@ export default function Element(props) {
         setDisplayedElement(props.element.number);
     }
     return (
-        <div className="Element" style={{gridRow: props.element.ypos, gridColumn: props.element.xpos, backgroundColor: weightedView? `hsl(136deg, 100%, ${lightness}%)` : "white", color: lightness < 20 ? "white" : "black"}} onClick={handleElementChange}>
+        <div className="Element" style={{gridRow: props.element.ypos, gridColumn: props.element.xpos, backgroundColor: weightedView? `hsl(136deg, 100%, ${lightness}%)` : "white", color: lightness < 20 ? "white" : "black", opacity: props.element[weightedView] !== null ? "1" : ".2"}} onClick={handleElementChange}>
             {displayAtomicNumber &&
                 <p className="Element_atomic_number">{props.element.number}</p>
             }
