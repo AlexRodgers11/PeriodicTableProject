@@ -6,15 +6,18 @@ import { FilterProvider } from "./contexts/Filter";
 import { WeightedViewProvider } from "./contexts/WeightedView";
 import { ElementDataProvider } from "./contexts/ElementData";
 import { DisplayAtomicNumberProvider } from "./contexts/DisplayAtomicNumber";
+import { HueProvider } from "./contexts/Hue";
 
 ReactDOM.render(
     <DisplayedElementProvider>
         <WeightedViewProvider>
             <FilterProvider>
                 <DisplayAtomicNumberProvider>
-                    <ElementDataProvider>
-                        <App />
-                    </ElementDataProvider>
+                    <HueProvider>
+                        <ElementDataProvider>
+                            <App />
+                        </ElementDataProvider>
+                    </HueProvider>
                 </DisplayAtomicNumberProvider>
             </FilterProvider>
         </WeightedViewProvider>
